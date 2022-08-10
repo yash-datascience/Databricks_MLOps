@@ -5,9 +5,9 @@ name: Databricks-CI-CD
 on:
 # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
     inputs:
       # This is the path of your notebooks in Git.  Currently, this is not recursively deploying notebooks
@@ -193,7 +193,7 @@ jobs:
     - name: Login via Az module
       uses: azure/login@v1.1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CRED }}
         # set this if you will be using PowerShell
         # enable-AzPSSession: true 
 
@@ -322,7 +322,7 @@ jobs:
     - name: Login via Az module
       uses: azure/login@v1.1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CRED }}
         # set this if you will be using PowerShell
         # enable-AzPSSession: true 
 
@@ -451,7 +451,7 @@ jobs:
     - name: Login via Az module
       uses: azure/login@v1.1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CRED }}
         # set this if you will be using PowerShell
         # enable-AzPSSession: true 
 
