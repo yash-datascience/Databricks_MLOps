@@ -102,7 +102,7 @@ jobs:
 
         
     # Login to Azure
-    - name: Login via Az module
+    - name: dev2
       uses: azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -162,7 +162,7 @@ jobs:
         path: ${{ github.workspace }}/ARM-Templates
         
     # Login to Azure
-    - name: Login via Az module
+    - name: dev2
       uses: azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -225,7 +225,7 @@ jobs:
 
         
   # Login to Azure
-    - name: Login via Az module
+    - name: dev2
       uses: azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
